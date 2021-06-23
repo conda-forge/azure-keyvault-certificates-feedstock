@@ -1,5 +1,5 @@
 {% set name = "azure-keyvault-certificates" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: ea651883ad00d0a9a25b38e51feff7111f6c7099c6fb2597598da5bb21d3451c
+  sha256: 4e0a9bae9fd4c222617fbce6b31f97e2e0622774479de3c387239cbfbb828d87
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - azure-common ~=1.1
     - azure-core >=1.7.0,<2.0.0
-    - msrest >=0.6.0
+    - msrest >=0.6.21
 
 test:
   imports:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Azure Key Vault Certificates client library for Python'
+  summary: Azure Key Vault Certificates client library for Python
   doc_url: https://azuresdkdocs.blob.core.windows.net/$web/python/azure-keyvault-certificates/latest/azure.keyvault.certificates.html
   dev_url: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/keyvault/azure-keyvault-certificates
 
