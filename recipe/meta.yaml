@@ -1,5 +1,5 @@
 {% set name = "azure-keyvault-certificates" %}
-{% set version = "4.4.0" %}
+{% set version = "4.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 0c0154f3801b2384dd7fa4ed60366f4b0ae9111c5ffcca878d05368a004b87cf
+  sha256: e1e20817dd1949a8eece5185ad439069c591d4076648fd9c63c11e33931c1990
 
 build:
   noarch: python
