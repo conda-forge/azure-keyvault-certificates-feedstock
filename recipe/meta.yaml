@@ -1,13 +1,13 @@
 {% set name = "azure-keyvault-certificates" %}
-{% set version = "4.7.0" %}
+{% set version = "4.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 9e47d9a74825e502b13d5481c99c182040c4f54723f43371e00859436dfcf3ca
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c561273e4402c25114873486c98bfa1b2c47886229d4100e87daf100ee047728
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.7
     - azure-common ~=1.1
-    - azure-core >=1.24.0,<2.0.0
+    - azure-core <2.0.0,>=1.29.5
     - isodate >=0.6.1
     - typing-extensions >=4.0.1
 
