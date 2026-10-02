@@ -1,5 +1,5 @@
 {% set name = "azure-keyvault-certificates" %}
-{% set version = "4.11.2" %}
+{% set version = "4.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1fbc1df1ae1b9b5b49a5b5915f826ec0b1662ecfee909cc757ad35208398bfbd
+  sha256: be86f72254a9c8eb918220a5f62a3885689ed6526743b64bab3dc94e76327fb0
 
 build:
   noarch: python
